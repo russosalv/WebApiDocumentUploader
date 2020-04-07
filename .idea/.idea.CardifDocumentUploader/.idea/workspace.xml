@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fd866dc3-7f40-4e8e-85cc-a2c781bf8534" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/CardifDocumentUploader/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CardifDocumentUploader/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CardifDocumentUploader/Services/Developer/DeveloperService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CardifDocumentUploader/appsettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CardifDocumentUploader/Model/DTO/Developer/EchoRequest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CardifDocumentUploader/Model/DTO/Developer/EchoResponse.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CardifDocumentUploader/DependencyInjection/DependencyInjectionHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CardifDocumentUploader/Model/DTO/Developer/DeveloperMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/C33AFD71-6EE0-4892-B8AD-69B81D88AE1C/69/Convert.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CardifDocumentUploader/Controllers/v1/DeveloperController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CardifDocumentUploader/Properties/launchSettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CardifDocumentUploader/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CardifDocumentUploader/Controllers/BaseController.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/CardifDocumentUploader/CardifDocumentUploader.csproj" />
+        <option value="$PROJECT_DIR$/CardifDocumentUploader/Model/DTO/Developer/EchoRequest.cs" />
+        <option value="$PROJECT_DIR$/CardifDocumentUploader/Model/DTO/Developer/EchoResponse.cs" />
+        <option value="$PROJECT_DIR$/CardifDocumentUploader/Model/DTO/Developer/DeveloperMapper.cs" />
+        <option value="$PROJECT_DIR$/CardifDocumentUploader/DependencyInjection/DependencyInjectionHelper.cs" />
+        <option value="$PROJECT_DIR$/CardifDocumentUploader/SwaggerConfig.cs" />
+        <option value="$PROJECT_DIR$/CardifDocumentUploader/Controllers/BaseController.cs" />
+        <option value="$PROJECT_DIR$/CardifDocumentUploader/Services/Developer/DeveloperService.cs" />
+        <option value="$PROJECT_DIR$/CardifDocumentUploader/Configuration/SerilogConfig.cs" />
+        <option value="$PROJECT_DIR$/CardifDocumentUploader/Program.cs" />
+        <option value="$PROJECT_DIR$/CardifDocumentUploader/appsettings.Development.json" />
+        <option value="$PROJECT_DIR$/CardifDocumentUploader/README.md" />
+        <option value="$PROJECT_DIR$/CardifDocumentUploader/appsettings.json" />
+        <option value="$PROJECT_DIR$/CardifDocumentUploader/Controllers/v1/DeveloperController.cs" />
+        <option value="$PROJECT_DIR$/CardifDocumentUploader/Properties/launchSettings.json" />
+        <option value="$PROJECT_DIR$/CardifDocumentUploader/WeatherForecast.cs" />
+        <option value="$PROJECT_DIR$/CardifDocumentUploader/Startup.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1a9zCgC8o5cyEus5ucqFOTFvaAP" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.SolutionExplorerActivator" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager" selected=".NET Launch Settings Profile.CardifDocumentUploader">
+    <configuration name="CardifDocumentUploader" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/CardifDocumentUploader/CardifDocumentUploader.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v3.1" />
+      <option name="LAUNCH_PROFILE_NAME" value="CardifDocumentUploader" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CardifDocumentUploader: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/CardifDocumentUploader/CardifDocumentUploader.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v3.1" />
+      <option name="LAUNCH_PROFILE_NAME" value="IIS Express" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fd866dc3-7f40-4e8e-85cc-a2c781bf8534" name="Default Changelist" comment="" />
+      <created>1586162473214</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586162473214</updated>
+      <workItem from="1586162477654" duration="5050000" />
+      <workItem from="1586167718801" duration="11433000" />
+      <workItem from="1586247610913" duration="23000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="WindowStateProjectService">
+    <state x="368" y="178" key="#xdebugger.evaluate" timestamp="1586176625229">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state x="368" y="178" key="#xdebugger.evaluate/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1586176625229" />
+    <state width="894" height="466" key="DebuggerActiveHint" timestamp="1586173691003">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state width="894" height="466" key="DebuggerActiveHint/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1586173691003" />
+    <state width="2517" height="352" key="GridCell.Tab.0.bottom" timestamp="1586190096957">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state width="2517" height="352" key="GridCell.Tab.0.bottom/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1586190096957" />
+    <state width="2517" height="352" key="GridCell.Tab.0.center" timestamp="1586190096957">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state width="2517" height="352" key="GridCell.Tab.0.center/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1586190096957" />
+    <state width="2517" height="352" key="GridCell.Tab.0.left" timestamp="1586190096957">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state width="2517" height="352" key="GridCell.Tab.0.left/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1586190096957" />
+    <state width="2517" height="352" key="GridCell.Tab.0.right" timestamp="1586190096957">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state width="2517" height="352" key="GridCell.Tab.0.right/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1586190096957" />
+    <state width="2517" height="352" key="GridCell.Tab.1.bottom" timestamp="1586190096957">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state width="2517" height="352" key="GridCell.Tab.1.bottom/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1586190096957" />
+    <state width="2517" height="352" key="GridCell.Tab.1.center" timestamp="1586190096957">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state width="2517" height="352" key="GridCell.Tab.1.center/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1586190096957" />
+    <state width="2517" height="352" key="GridCell.Tab.1.left" timestamp="1586190096957">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state width="2517" height="352" key="GridCell.Tab.1.left/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1586190096957" />
+    <state width="2517" height="352" key="GridCell.Tab.1.right" timestamp="1586190096957">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state width="2517" height="352" key="GridCell.Tab.1.right/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1586190096957" />
+    <state width="2517" height="352" key="GridCell.Tab.2.bottom" timestamp="1586190096958">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state width="2517" height="352" key="GridCell.Tab.2.bottom/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1586190096958" />
+    <state width="2517" height="352" key="GridCell.Tab.2.center" timestamp="1586190096957">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state width="2517" height="352" key="GridCell.Tab.2.center/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1586190096957" />
+    <state width="2517" height="352" key="GridCell.Tab.2.left" timestamp="1586190096957">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state width="2517" height="352" key="GridCell.Tab.2.left/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1586190096957" />
+    <state width="2517" height="352" key="GridCell.Tab.2.right" timestamp="1586190096958">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state width="2517" height="352" key="GridCell.Tab.2.right/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1586190096958" />
+    <state width="2517" height="352" key="GridCell.Tab.3.bottom" timestamp="1586190096958">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state width="2517" height="352" key="GridCell.Tab.3.bottom/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1586190096958" />
+    <state width="2517" height="352" key="GridCell.Tab.3.center" timestamp="1586190096958">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state width="2517" height="352" key="GridCell.Tab.3.center/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1586190096958" />
+    <state width="2517" height="352" key="GridCell.Tab.3.left" timestamp="1586190096958">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state width="2517" height="352" key="GridCell.Tab.3.left/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1586190096958" />
+    <state width="2517" height="352" key="GridCell.Tab.3.right" timestamp="1586190096958">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state width="2517" height="352" key="GridCell.Tab.3.right/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1586190096958" />
+    <state width="2517" height="352" key="GridCell.Tab.4.bottom" timestamp="1586190096959">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state width="2517" height="352" key="GridCell.Tab.4.bottom/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1586190096959" />
+    <state width="2517" height="352" key="GridCell.Tab.4.center" timestamp="1586190096958">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state width="2517" height="352" key="GridCell.Tab.4.center/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1586190096958" />
+    <state width="2517" height="352" key="GridCell.Tab.4.left" timestamp="1586190096958">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state width="2517" height="352" key="GridCell.Tab.4.left/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1586190096958" />
+    <state width="2517" height="352" key="GridCell.Tab.4.right" timestamp="1586190096959">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state width="2517" height="352" key="GridCell.Tab.4.right/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1586190096959" />
+    <state x="781" y="167" key="SettingsEditor" timestamp="1586168573122">
+      <screen x="0" y="0" width="2560" height="1050" />
+    </state>
+    <state x="781" y="167" key="SettingsEditor/-1920.0.1920.1050/0.0.2560.1050@0.0.2560.1050" timestamp="1586168573122" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="LaunchSettings">
+        <watch expression="Configuration" language="C#" custom="RiderImportsList:" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
