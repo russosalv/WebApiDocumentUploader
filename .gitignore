@@ -35,3 +35,8 @@ msbuild.wrn
 
 # Visual Studio 2015
 .vs/
+*.cache
+
+WebApiDocumentUploader/bin/
+WebApiDocumentUploader/obj/
+WebApiDocumentUploader/obj/Debug/netcoreapp3.1/

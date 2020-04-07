@@ -14,6 +14,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using AutoMapper;
+using Microsoft.AspNetCore.Http.Features;
 using WebApiDocumentUploader.DependencyInjection;
 
 namespace WebApiDocumentUploader
@@ -54,6 +55,13 @@ namespace WebApiDocumentUploader
 
             //Add Services
             services.AddAllServices();
+            
+            //Set MultipartBodyLengthLimit to max
+            services.Configure<FormOptions>(x =>
+            {
+                //x.ValueLengthLimit = int.MaxValue;
+                x.MultipartBodyLengthLimit = int.MaxValue; // In case of multipart
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

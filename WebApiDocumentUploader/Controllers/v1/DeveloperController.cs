@@ -1,4 +1,7 @@
-﻿using System.Threading.Tasks;
+﻿using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
 using WebApiDocumentUploader.Model.DTO.Developer;
 using WebApiDocumentUploader.Services.Developer;
 using Microsoft.AspNetCore.Http;
@@ -13,7 +16,7 @@ namespace WebApiDocumentUploader.Controllers.v1
         private readonly DeveloperService _developerService;
 
         public DeveloperController(
-            ILogger<DeveloperController> logger, 
+            ILogger<DeveloperController> logger,
             DeveloperService developerService)
         {
             _logger = logger;
@@ -45,8 +48,40 @@ namespace WebApiDocumentUploader.Controllers.v1
         public async Task<IActionResult> Create(EchoRequest request)
         {
             _logger.LogDebug("received request in controller");
-            var data= await _developerService.Echo(request);
+            var data = await _developerService.Echo(request);
             return ApiResponseWithData(data);
         }
+
+        /// <summary>
+        /// Test to receive multipart/form without streaming
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        [HttpPost("multipart_form_single_no_streaming")]
+        [ProducesResponseType(typeof(BaseDeveloperResponse), 200)]
+        [DisableRequestSizeLimit]
+        public async Task<IActionResult> MultiPartFormTest([FromForm] MultiPartTestRequestSingle request)
+        {
+            var returner = new BaseDeveloperResponse();
+            _logger.LogDebug($"Execution started");
+            _logger.LogDebug($"request.Id : {request.Id}");
+            _logger.LogDebug(
+                $"request.MetaDatas : {string.Join(',', request.MetaDatas.Select(x => $"[{x.Key} : {x.Value}]"))}");
+
+            if (request.FormFile.Length > 0)
+            {
+                var filePath = Path.Combine(@"C:\Temp", request.FormFile.FileName);
+                await using (var fileStream = new FileStream(filePath, FileMode.Create))
+                {
+                    await request.FormFile.CopyToAsync(fileStream);
+                    await fileStream.FlushAsync();
+                }
+
+                return Ok(returner.Stop($"Document created at {filePath}"));
+            }
+
+            return BadRequest();
+        }
     }
+
 }
