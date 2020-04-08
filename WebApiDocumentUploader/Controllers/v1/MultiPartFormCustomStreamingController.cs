@@ -20,10 +20,11 @@ using WebApiDocumentUploader.Services;
 
 namespace WebApiDocumentUploader.Controllers.v1
 {
-    public class MultiPartCustomStreamingController : BaseController
+    [Obsolete("No big improvements then default serialization and need custom form request")]
+    public class MultiPartFormCustomStreamingController : BaseController
     {
-        private readonly ILogger<MultiPartCustomStreamingController> _logger;
-        private readonly MultiPartCustomSteamingService _multiPartCustomSteamingService;
+        private readonly ILogger<MultiPartFormCustomStreamingController> _logger;
+        private readonly MultiPartFormCustomSteamingService _multiPartFormCustomSteamingService;
 
         //private static readonly FormOptions _defaultFormOptions = new FormOptions();
         private readonly FormOptions _defaultFormOptions;
@@ -33,14 +34,15 @@ namespace WebApiDocumentUploader.Controllers.v1
         private readonly string[] _permittedExtensions = {".txt", ".zip"};
 
 
-        public MultiPartCustomStreamingController(
-            ILogger<MultiPartCustomStreamingController> logger,
-            MultiPartCustomSteamingService multiPartCustomSteamingService,
+        [Obsolete("No big improvements then default serialization and need custom form request")]
+        public MultiPartFormCustomStreamingController(
+            ILogger<MultiPartFormCustomStreamingController> logger,
+            MultiPartFormCustomSteamingService multiPartFormCustomSteamingService,
             IConfiguration config,
             IOptions<FormOptions> formOption)
         {
             _logger = logger;
-            _multiPartCustomSteamingService = multiPartCustomSteamingService;
+            _multiPartFormCustomSteamingService = multiPartFormCustomSteamingService;
             
             _fileSizeLimit = config.GetValue<long>("FileSizeLimit");
             _targetFilePath = config.GetValue<string>("StoredFilesPath");

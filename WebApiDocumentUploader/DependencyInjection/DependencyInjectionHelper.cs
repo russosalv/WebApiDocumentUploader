@@ -16,7 +16,7 @@ namespace WebApiDocumentUploader.DependencyInjection
             => services
                 .AddTransient<DeveloperService>()
                 .AddTransient<MultiPartFormDefaultStreamingService>()
-                .AddTransient<MultiPartCustomSteamingService>()
+                .AddTransient<MultiPartFormCustomSteamingService>()
         ;
     }
     
