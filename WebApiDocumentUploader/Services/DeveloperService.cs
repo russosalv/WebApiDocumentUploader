@@ -1,9 +1,12 @@
-﻿using System.Threading.Tasks;
+﻿using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
 using AutoMapper;
-using WebApiDocumentUploader.Model.DTO.Developer;
 using Microsoft.Extensions.Logging;
+using WebApiDocumentUploader.Model.DTO;
+using WebApiDocumentUploader.Model.DTO.Developer;
 
-namespace WebApiDocumentUploader.Services.Developer
+namespace WebApiDocumentUploader.Services
 {
     public class DeveloperService
     {

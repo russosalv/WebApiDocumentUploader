@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using WebApiDocumentUploader.Model.DTO.Developer;
-using WebApiDocumentUploader.Services.Developer;
 using Microsoft.Extensions.DependencyInjection;
+using WebApiDocumentUploader.Services;
 
 namespace WebApiDocumentUploader.DependencyInjection
 {
@@ -15,6 +15,8 @@ namespace WebApiDocumentUploader.DependencyInjection
         public static IServiceCollection AddAllServices(this IServiceCollection services)
             => services
                 .AddTransient<DeveloperService>()
+                .AddTransient<MultiPartFormDefaultStreamingService>()
+                .AddTransient<MultiPartCustomSteamingService>()
         ;
     }
     

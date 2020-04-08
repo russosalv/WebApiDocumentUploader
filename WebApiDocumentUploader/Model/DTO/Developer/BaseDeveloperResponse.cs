@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 
 namespace WebApiDocumentUploader.Model.DTO.Developer
 {
@@ -18,11 +19,18 @@ namespace WebApiDocumentUploader.Model.DTO.Developer
             _stopwatch.Start();
         }
 
-        public BaseDeveloperResponse Stop(string message)
+        public BaseDeveloperResponse Stop(string message = null)
         {
             _stopwatch.Stop();
             ExecutedTimeInMs = _stopwatch.ElapsedMilliseconds;
-            Message = message;
+            
+            if(string.IsNullOrEmpty(Message))
+                Message = message;
+            else
+            {
+                Message += $"{Environment.NewLine}{message}";
+            }
+            
             return this;
         }
     }

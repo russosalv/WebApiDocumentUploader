@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
 
-namespace WebApiDocumentUploader.Model.DTO.Developer
+namespace WebApiDocumentUploader.Model.DTO
 {
     public class MultiPartTestRequestBase
     {
@@ -15,7 +15,7 @@ namespace WebApiDocumentUploader.Model.DTO.Developer
         public IFormFile FormFile { get; set; }
     }
 
-    public class MultiPartTestRequestMore : MultiPartTestRequestBase
+    public class MultiPartTestRequestMultiple : MultiPartTestRequestBase
     {
         public List<IFormFile> FormFiles { get; set; }
     }

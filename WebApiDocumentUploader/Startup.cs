@@ -56,6 +56,7 @@ namespace WebApiDocumentUploader
             //Add Services
             services.AddAllServices();
             
+            //TODO: set max value configurable from iConfig
             //Set MultipartBodyLengthLimit to max
             services.Configure<FormOptions>(x =>
             {
