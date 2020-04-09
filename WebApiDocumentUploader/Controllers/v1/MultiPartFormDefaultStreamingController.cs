@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using WebApiDocumentUploader.Model.DTO;
 using WebApiDocumentUploader.Model.DTO.Developer;
@@ -15,19 +16,26 @@ namespace WebApiDocumentUploader.Controllers.v1
     {
         private readonly ILogger<MultiPartFormDefaultStreamingController> _logger;
         private readonly MultiPartFormDefaultStreamingService _multiPartFormDefaultStreamingService;
+        private readonly string _targetFilePath;
 
         public MultiPartFormDefaultStreamingController(
             ILogger<MultiPartFormDefaultStreamingController> logger, 
-            MultiPartFormDefaultStreamingService multiPartFormDefaultStreamingService)
+            MultiPartFormDefaultStreamingService multiPartFormDefaultStreamingService,
+            IConfiguration config)
         {
             _logger = logger;
             _multiPartFormDefaultStreamingService = multiPartFormDefaultStreamingService;
+            _targetFilePath = config.GetValue<string>("StoredFilesPath");
         }
         
         
         /// <summary>
         /// Test to receive multipart/form single File without streaming
         /// </summary>
+        /// <remarks>
+        /// Metadata not testable with swagger, but use postman or similar instead
+        /// example of postman request in the project
+        /// </remarks>
         /// <param name="request"></param>
         /// <returns></returns>
         [HttpPost("single")]
@@ -53,15 +61,18 @@ namespace WebApiDocumentUploader.Controllers.v1
         /// Test to receive multipart/form multiple Files as collection without streaming
         /// </summary>
         /// <remarks>
-        /// Working not testable with Swagger, seems that create wrong request
-        /// test use CURL or Postman
+        /// Metadata and MultipleFile not testable with swagger, but use postman or similar instead
+        /// example of postman request in the project
+        /// swagger issue:https://github.com/OAI/OpenAPI-Specification/issues/254
+        /// swagger ui issue: https://github.com/swagger-api/swagger-ui/issues/4600
+        /// swagger ui issue: https://github.com/domaindrivendev/Swashbuckle.AspNetCore/issues/1029
         /// </remarks>
         /// <param name="request"></param>
         /// <returns></returns>
         [HttpPost("collection_of_file")]
         [ProducesResponseType(typeof(BaseDeveloperResponse), 200)]
         [DisableRequestSizeLimit]
-        public async Task<IActionResult> MultiPartFormTestMultiple_Wrong([FromForm] MultiPartTestRequestMultiple request)
+        public async Task<IActionResult> MultiPartFormTestMultiple([FromForm] MultiPartTestRequestMultiple request)
         {
             var returner = new BaseDeveloperResponse();
             _logger.LogDebug($"Execution started");
@@ -74,7 +85,7 @@ namespace WebApiDocumentUploader.Controllers.v1
             {
                 if (formFile.Length > 0)
                 {
-                    var filePath = Path.Combine(@"C:\Temp", formFile.FileName);
+                    var filePath = Path.Combine(_targetFilePath, formFile.FileName);
                     await using (var fileStream = new FileStream(filePath, FileMode.Create))
                     {
                         await formFile.CopyToAsync(fileStream);
@@ -97,6 +108,7 @@ namespace WebApiDocumentUploader.Controllers.v1
         [HttpPost("multi_request")]
         [ProducesResponseType(typeof(BaseDeveloperResponse), 200)]
         [DisableRequestSizeLimit]
+        [Obsolete]
         public async Task<IActionResult> MultiPartFormTestMultiple([FromForm] List<MultiPartTestRequestSingle> requests)
         {
             try

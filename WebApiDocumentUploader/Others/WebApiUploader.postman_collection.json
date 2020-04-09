@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "3133bb00-791f-4007-ba89-8eccf0f8f335",
+		"name": "WebApiUploader",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "MultiPartFormDefaultStreaming",
+			"item": [
+				{
+					"name": "single",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "formFile",
+									"type": "file",
+									"src": "/C:/Users/alerusso/Downloads/512MB.zip"
+								},
+								{
+									"key": "metaDatas[0][key]",
+									"value": "chiave1",
+									"type": "text"
+								},
+								{
+									"key": "metaDatas[0][value]",
+									"value": "valore1",
+									"type": "text"
+								},
+								{
+									"key": "metaDatas[1][key]",
+									"value": "chiave2",
+									"type": "text"
+								},
+								{
+									"key": "metaDatas[1][value]",
+									"value": "valore2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/MultiPartFormDefaultStreaming/single",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"MultiPartFormDefaultStreaming",
+								"single"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "collection_of_file",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "200",
+									"type": "text"
+								},
+								{
+									"key": "FormFiles",
+									"type": "file",
+									"src": "/C:/Users/alerusso/Downloads/512MB.zip"
+								},
+								{
+									"key": "FormFiles",
+									"type": "file",
+									"src": "/C:/Users/alerusso/Downloads/200MB.zip"
+								},
+								{
+									"key": "FormFiles",
+									"type": "file",
+									"src": "/C:/Users/alerusso/Downloads/100MB.zip"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/MultiPartFormDefaultStreaming/collection_of_file",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"MultiPartFormDefaultStreaming",
+								"collection_of_file"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "MultiPartJson​",
+			"item": [
+				{
+					"name": "single",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "json",
+									"value": "{   \"id\": 123,   \"metaDatas\": [     {       \"key\": \"chiave\",       \"value\": \"valore\"     }   ] }",
+									"type": "text"
+								},
+								{
+									"key": "FormFile",
+									"type": "file",
+									"src": "/C:/Users/alerusso/Downloads/5MB.zip"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/MultiPartJson/single",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"MultiPartJson",
+								"single"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

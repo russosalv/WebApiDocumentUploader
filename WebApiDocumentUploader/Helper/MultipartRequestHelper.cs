@@ -4,6 +4,7 @@ using Microsoft.Net.Http.Headers;
 
 namespace WebApiDocumentUploader.Helper
 {
+    [Obsolete]
     public static class MultipartRequestHelper
     {
         // Content-Type: multipart/form-data; boundary="----WebKitFormBoundarymx2fSWqWSd0OxQqq"

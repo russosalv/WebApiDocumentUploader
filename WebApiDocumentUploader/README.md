@@ -6,6 +6,7 @@
 #### Bibliography
 Swagger:
 - https://docs.microsoft.com/it-it/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-3.1&tabs=visual-studio
+- https://github.com/domaindrivendev/Swashbuckle.AspNetCore
 
 Serilog:
 - https://github.com/serilog/serilog-aspnetcore

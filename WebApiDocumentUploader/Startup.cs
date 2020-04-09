@@ -31,6 +31,9 @@ namespace WebApiDocumentUploader
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //Force use oj Newtonsoft
+            services.AddMvc().AddNewtonsoftJson();
+            
             services.AddControllers();
             
             // Register the Swagger generator, defining 1 or more Swagger documents
@@ -49,6 +52,8 @@ namespace WebApiDocumentUploader
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 options.IncludeXmlComments(xmlPath);
             });
+            //Force to use Newtonsoft
+            services.AddSwaggerGenNewtonsoftSupport();
 
             //Add AutoMapper
             services.AddAllAutoMappers();
@@ -60,9 +65,19 @@ namespace WebApiDocumentUploader
             //Set MultipartBodyLengthLimit to max
             services.Configure<FormOptions>(x =>
             {
-                //x.ValueLengthLimit = int.MaxValue;
+                x.ValueLengthLimit = int.MaxValue;
                 x.MultipartBodyLengthLimit = int.MaxValue; // In case of multipart
             });
+            
+            // Add Cors ToDo: only for debug allow all then rescrict
+            services.AddCors(o => o.AddPolicy("AnyOrigin", builder =>
+            {
+                builder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader();
+            }));
+            //Add Cors 
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -90,6 +105,9 @@ namespace WebApiDocumentUploader
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
+            
+            //CORS FOR DEBUG ONLY
+            app.UseCors("AnyOrigin");
         }
     }
 }

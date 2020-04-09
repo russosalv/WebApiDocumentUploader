@@ -13,6 +13,7 @@ using Microsoft.Net.Http.Headers;
 
 namespace WebApiDocumentUploader.Helper
 {
+    [Obsolete]
     public static class FileHelpers
     {
         // If you require a check on specific characters in the IsValidFileExtensionAndSignature

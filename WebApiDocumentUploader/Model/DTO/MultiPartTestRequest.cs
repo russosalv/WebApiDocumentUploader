@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using WebApiDocumentUploader.Helper;
 
 namespace WebApiDocumentUploader.Model.DTO
 {
@@ -17,6 +19,23 @@ namespace WebApiDocumentUploader.Model.DTO
 
     public class MultiPartTestRequestMultiple : MultiPartTestRequestBase
     {
-        public List<IFormFile> FormFiles { get; set; }
+        public IEnumerable<IFormFile> FormFiles { get; set; }
+    }
+    
+    public class MultiPartTestRequestMultiple2 : MultiPartTestRequestBase
+    {
+        public IFormFile[] Files { get; set; }
+    }
+    
+
+    [ModelBinder(typeof(JsonWithFilesFormDataModelBinder), Name = "json")]
+    public class MultiPartTestRequestSingleJson : MultiPartTestRequestSingle
+    {
+    }
+    
+    [ModelBinder(typeof(JsonWithFilesFormDataModelBinder), Name = "json")]
+    public class MultiPartTestRequestMultipleJson : MultiPartTestRequestMultiple
+    {
+        
     }
 }

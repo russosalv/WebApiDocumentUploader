@@ -5,6 +5,7 @@ namespace WebApiDocumentUploader.Controllers
     [ApiController]
     [Produces("application/json")]
     [Route("api/[controller]")]
+#pragma warning restore CS1591
     public class BaseController : Controller
     {
         /// <summary>
@@ -31,4 +32,5 @@ namespace WebApiDocumentUploader.Controllers
                 :
                 Ok(result);
     }
+#pragma warning disable CS1591
 }

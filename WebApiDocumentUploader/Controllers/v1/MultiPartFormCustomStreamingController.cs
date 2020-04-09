@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
@@ -193,12 +194,12 @@ namespace WebApiDocumentUploader.Controllers.v1
             // For more information, see the topic that accompanies 
             // this sample app.
 
-            var check = formData.FormFiles.Count;
+            var check = formData.FormFiles.ToList().Count;
             
             return Ok(returner.Stop());
         }
         
-        private static Encoding GetEncoding(MultipartSection section)
+        public static Encoding GetEncoding(MultipartSection section)
         {
             var hasMediaTypeHeader = 
                 MediaTypeHeaderValue.TryParse(section.ContentType, out var mediaType);
@@ -215,4 +216,5 @@ namespace WebApiDocumentUploader.Controllers.v1
 
         #endregion
     }
+
 }
