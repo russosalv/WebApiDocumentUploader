@@ -2,6 +2,9 @@
 
 .netCore 3.1
 
+Basic behaviour to AVOID:<br>
+![DO NOT DO THIS](https://miro.medium.com/max/660/1*hfYJXXcFiNGbcyzcgkSAiQ.png)
+
 -----------------------------------------
 #### Bibliography
 GuideLine:
