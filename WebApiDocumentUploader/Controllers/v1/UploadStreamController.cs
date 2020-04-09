@@ -61,6 +61,7 @@ namespace WebApiDocumentUploader.Controllers.v1
         }
         
         [HttpPost("stream")]
+        [DisableRequestSizeLimit]
         public async Task<IActionResult> ControllerModelStream() {
             byte[] buffer = new byte[BUF_SIZE];
             List<IFormFile> files = new List<IFormFile>();
