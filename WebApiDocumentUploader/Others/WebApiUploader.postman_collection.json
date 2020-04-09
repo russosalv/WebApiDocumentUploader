@@ -159,6 +159,139 @@
 				}
 			],
 			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "UploadStream",
+			"item": [
+				{
+					"name": "collation_of_file",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Id",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "Files",
+									"type": "file",
+									"src": "/C:/Users/alerusso/Downloads/5MB.zip"
+								},
+								{
+									"key": "metaDatas[0][key]",
+									"value": "chiave1",
+									"type": "text"
+								},
+								{
+									"key": "metaDatas[0][value]",
+									"value": "valore1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/UploadStream/collection_of_file",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"UploadStream",
+								"collection_of_file"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "stream",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Name",
+									"value": "ilNome",
+									"type": "text"
+								},
+								{
+									"key": "Files",
+									"type": "file",
+									"src": "/C:/Users/alerusso/Downloads/5MB.zip"
+								},
+								{
+									"key": "Description",
+									"value": "laDescrizione",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/stream",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"stream"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "stream_modelDisabled",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Name",
+									"value": "ilNome",
+									"type": "text"
+								},
+								{
+									"key": "Files",
+									"type": "file",
+									"src": "/C:/Users/alerusso/Downloads/5MB.zip"
+								},
+								{
+									"key": "Description",
+									"value": "laDescrizione",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/UploadStream/stream_modelDisabled",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"UploadStream",
+								"stream_modelDisabled"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
 		}
 	],
 	"protocolProfileBehavior": {}

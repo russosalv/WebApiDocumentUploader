@@ -4,6 +4,10 @@
 
 -----------------------------------------
 #### Bibliography
+GuideLine:
+- https://docs.microsoft.com/en-us/aspnet/core/mvc/models/file-uploads?view=aspnetcore-3.1#uploading-large-files-with-streaming
+- https://medium.com/@ma1f/file-streaming-performance-in-dotnet-4dee608dd953
+
 Swagger:
 - https://docs.microsoft.com/it-it/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-3.1&tabs=visual-studio
 - https://github.com/domaindrivendev/Swashbuckle.AspNetCore
